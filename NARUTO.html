@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Shippuden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #282828;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            color: #fff;
+        }
+        .header button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #c0392b;
+        }
+        .content {
+            display: flex;
+            margin-top: 20px;
+        }
+        .poster {
+            flex: 1;
+            text-align: center;
+        }
+        .poster img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .details {
+            flex: 2;
+            margin-left: 20px;
+        }
+        .details h2 {
+            margin: 0;
+            color: #fff;
+        }
+        .details p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .info {
+            margin-top: 20px;
+        }
+        .info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info table th, .info table td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: left;
+        }
+        .info table th {
+            background-color: #333;
+        }
+
+        /* Tabs Styles */
+        .tabs {
+            margin-top: 40px;
+        }
+        .tabs ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .tabs ul li {
+            flex: 1;
+            text-align: center;
+        }
+        .tabs ul li a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #333;
+        }
+        .tabs ul li a:hover, .tabs ul li a.active {
+            background-color: #e74c3c;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #282828;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc nếu cần */
+            padding: 10px;
+        }
+        .video-section iframe {
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 16/9; 
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            text-align: center;
+            color: #999;
+        }
+        .footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .characters {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .character {
+            text-align: center;
+            color: #fff;
+        }
+        .character img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #444;
+        }
+        .character p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        /* Phim khác Styles */
+        .related-movies {
+            margin-top: 40px;
+            width: 100%;
+        }
+        .related-movies h2 {
+            text-align: center;
+            color: #e74c3c;
+        }
+        .movies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .movie {
+            flex: 1 1 calc(25% - 10px);
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .movie-title {
+            text-align: center;
+            margin-top: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Naruto Shippuden</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="poster">
+                <img src="https://www.ubuy.vn/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFxYjRJNnJic0wuX0FDX1NMMTUwMF8uanBn.jpg" alt="Naruto Shippuden">
+            </div>
+            <div class="details">
+                <h2>Naruto Shippuden</h2>
+                <p>
+                    "Tiếp nối phần I sau khi cậu bé cùng sư phụ Jiraiya của mình đi tập luyện xa trở về làng Lá. 
+                    Sau khi huấn luyện 2 năm rưỡi với Jiraiya, Naruto trở về làng Lá, đoàn tụ với những người bạn cậu đã chia tay, và lập lại Nhóm 7, giờ được gọi là Nhóm Kakashi, với Sai thế chỗ Sasuke. 
+                    Tất cả những người bạn của Naruto đều đã trưởng thành và thăng cấp, có người hơn người khác. Không giống như phần đầu khi chúng chỉ đóng vai trò phụ, tổ chức Akatsuki chiếm lấy vai trò đối nghịch chính trong tham vọng thống trị thế giới."
+                </p>
+                <p><strong>Thời lượng:</strong> 500 tập</p>
+                <p><strong>Ngày phát hành:</strong> 2007</p>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <ul>
+                <li><a href="#" class="active" onclick="showTab(event, 'info')">Thông tin phim</a></li>
+                <li><a href="#" onclick="showTab(event, 'characters')">Nhân vật</a></li>
+                <li><a href="#" onclick="showTab(event, 'trailer')">Trailer</a></li>
+                <li><a href="#" onclick="showTab(event, 'gallery')">Hình ảnh</a></li>
+            </ul>
+
+            <div id="info" class="tab-content active">
+                <h3>Thông tin chi tiết về Naruto Shippuden</h3>
+                <table>
+                    <tr>
+                        <th style="width: 30%;">Thể loại</th>
+                        <td>Anime bộ, Shounen, Super Power, Comedy, Martial Arts, Action</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Trạng thái</th>
+                        <td>Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Đạo diễn</th>
+                        <td> Yamashita Hiroyuki</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Ngôn ngữ</th>
+                        <td>Tiếng Nhật (VietSub)</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Độ tuổi</th>
+                        <td>PG-13 - Teens 13 tuổi trở lên</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Studio</th>
+                        <td>Studio Pierrot</td>
+                    </tr>
+                    <tr>
+                        <th style="width: 30%;">Chất lượng</th>
+                        <td>HD</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="characters" class="tab-content">
+                <h3>Nhân vật chính</h3>
+                <div class="characters">
+                    <!-- Character 1 -->
+                    <div class="character">
+                        <img src="https://genk.mediacdn.vn/139269124445442048/2023/12/6/naruto-6-5448-1701839899156-1701839899299913130408.jpg" alt="Naruto">
+                        <p>Naruto</p>
+                    </div>
+                    <!-- Character 2 -->
+                    <div class="character">
+                        <img src="https://ss-images.saostar.vn/w700/pc/1594356105972/wp3335539.jpg" alt="Sasuke">
+                        <p>Sasuke</p>
+                    </div>
+                    <!-- Character 3 -->
+                    <div class="character">
+                        <img src="https://cdn.popsww.com/blog/sites/2/2023/07/haruno-sakura-boruto.jpg" alt="Sakura">
+                        <p>Sakura</p>
+                    </div>
+                    <!-- Add more characters as needed -->
+                </div>
+            </div>
+            <div id="trailer" class="tab-content">
+                <h3>Trailer phim</h3>
+                <div class="video-section">
+                    <iframe src="https://www.youtube.com/embed/H3PUDLhfXkQ?si=90_kLlVJ3glV2tE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+                </div>
+                <div id="gallery" class="tab-content">
+                <h3>Hình ảnh nổi bật</h3>
+                <img src="https://www.yourdecoration.com/cdn/shop/files/abystyle-abydco171-naruto-shippuden-shippuden-group-nr-1-poster-52x38cm.jpg?v=1714115323" alt="Gallery Image 1" style="width: 100%; margin-top: 10px;">
+                <img src="https://m.media-amazon.com/images/I/71rZK-pP+QL.jpg" alt="Gallery Image 2" style="width: 100%; margin-top: 10px;">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/jcc9ci80/poster/s/r/r/medium-pl-anime-shippuden-naruto-hokage-photoswall-wall-poster-original-imaet3geg8zyqhzm.jpeg?q=90&crop=false" alt="Gallery Image 3" style="width: 100%; margin-top: 10px;">
+                <img src="https://myhotposters.com/cdn/shop/products/mz1710_1024x1024.jpeg?v=1571444623" alt="Gallery Image 4" style="width: 100%; margin-top: 10px;">
+                <img src="https://i.redd.it/b3vqbglvbnta1.jpg" alt="Gallery Image 5" style="width: 100%; margin-top: 10px;">
+                <img src="https://pbs.twimg.com/media/Fb_8h_WakAAuY2A.jpg" alt="Gallery Image 6" style="width: 100%; margin-top: 10px;">
+            </div>
+        </div>
+    </div>
+    <div class="related-movies">
+        <h2>Phim khác bạn có thể xem</h2>
+        <div class="movies-grid">
+            <!-- 1 -->
+            <div class="movie" onclick="window.location.href='AOT.html'">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81wB0fBu6LL.jpg">
+                <p class="movie-title">Attack on Titan</p>
+            </div>
+            <!-- 2 -->
+            <div class="movie" onclick="window.location.href='FMA.html';">
+                <img src="https://static.wikia.nocookie.net/fma/images/c/ca/Fma2_intro.jpg/revision/latest?cb=20140602095111" >
+                <p class="movie-title">Fullmetal Alchemist</p>
+            </div>
+            <!-- 3 -->
+            <div class="movie" onclick="window.location.href='Naruto.html';">
+                <img src="https://www.ubuy.vn/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFxYjRJNnJic0wuX0FDX1NMMTUwMF8uanBn.jpg" >
+                <p class="movie-title">Naruto</p>
+            </div>
+            <!-- 4 -->
+            <div class="movie" onclick="window.location.href='OP.html';">
+                <img src="https://pic0.iqiyipic.com/image/20240618/f2/2e/a_100421840_m_601_en_m6_260_360.jpg" >
+                <p class="movie-title">One Piece</p>
+            </div>
+            <!-- 5 -->
+            <div class="movie" onclick="window.location.href='MHA.html';">
+                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p12793542_b_v13_ak.jpg" >
+                <p class="movie-title">My Hero Academia</p>
+            </div>
+            <!-- 6 -->
+            <div class="movie" onclick="window.location.href='SAO.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" >
+                <p class="movie-title">Sword Art Online</p>
+            </div>
+            <!-- 7 -->
+            <div class="movie" onclick="window.location.href='DEMON.html';">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/1704/2ZfAUG5CTXdM34S1OhmMW1zF.jpg" >
+                <p class="movie-title">Demon Slayer</p>
+            </div>
+            <!-- 8 -->
+            <div class="movie" onclick="window.location.href='DEATH.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                <p class="movie-title">Death Note</p>
+            </div>
+            <!-- 9 -->
+            <div class="movie" onclick="window.location.href='DBS.html';">
+                <img src="https://www.justwatch.com/images/poster/311344951/s718/dragon-ball-super.jpg" >
+                <p class="movie-title">Dragon Ball Super</p>
+            </div>
+            <!-- M10 -->
+            <div class="movie" onclick="window.location.href='FAIRY.html';">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202007/1308/StbziMS5VEhNntVpqjIRyOl1.png" >
+                <p class="movie-title">Fairy Tail</p>
+            </div>
+            <!-- 11 -->
+            <div class="movie" onclick="window.location.href='HXH.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" >
+                <p class="movie-title">Hunter x Hunter</p>
+            </div>
+            <!-- 12 -->
+            <div class="movie" onclick="window.location.href='BLEACH.html';">
+                <img src="https://yvolve.shop/cdn/shop/files/GBYDCO630.jpg?v=1716466240" >
+                <p class="movie-title">Bleach</p>
+            </div>
+            <!-- 13 -->
+            <div class="movie" onclick="window.location.href='TOKYO.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BZWI2NzZhMTItOTM3OS00NjcyLThmN2EtZGZjMjlhYWMwODMzXkEyXkFqcGc@._V1_.jpg" >
+                <p class="movie-title">Tokyo Ghoul</p>
+            </div>
+            <!-- 14 -->
+            <div class="movie" onclick="window.location.href='CLOVER.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" >
+                <p class="movie-title">Black Clover</p>
+            </div>
+            <!-- 15 -->
+            <div class="movie" onclick="window.location.href='GEASS.html';">
+                <img src="https://m.media-amazon.com/images/I/813ek5yvX1L._AC_UF894,1000_QL80_.jpg" >
+                <p class="movie-title">Code Geass</p>
+            </div>
+            <!-- 16 -->
+            <div class="movie" onclick="window.location.href='EVA.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BMGRiOWQyOTAtZDQ0Ny00NGRiLWIyYTYtZWM1MjNjNzg0ZjE3XkEyXkFqcGc@._V1_.jpg">
+                <p class="movie-title">Neon Genesis Evangelion</p>
+            </div>
+            <!-- 17 -->
+            <div class="movie" onclick="window.location.href='APRIL.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BZGMyYmFmNzgtMWQ4NS00MWE2LTg4YmEtZGY1MTBiODE0YmE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                <p class="movie-title">Your Lie In April</p>
+            </div>
+            <!-- 18 -->
+            <div class="movie" onclick="window.location.href='ZERO.html';">
+                <img src="https://external-preview.redd.it/re-zero-season-3-new-key-visual-v0-pEs8RGhSmENJC8bXvh_D390t-0JcshAfoGTb8JOypOw.jpg?auto=webp&s=edcc4cb38a7fc05042af42ffd3e8dadbd08caa3e" >
+                <p class="movie-title">Re:Zero</p>
+            </div>
+            <!-- 19 -->
+            <div class="movie" onclick="window.location.href='OVER.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BYjNjNDBmZjAtMGZiMS00ODBkLWFjYWItZWQ1ZjEwOGNmZDBjXkEyXkFqcGc@._V1_.jpg" >
+                <p class="movie-title">Overlord</p>
+            </div>
+            <!-- 20 -->
+            <div class="movie" onclick="window.location.href='VLS.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BNDA3MGNmZTEtMzFiMy00ZmViLThhNmQtMjQ4ZDc5MDEyN2U1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                <p class="movie-title">Vinland Saga</p>
+            </div>
+            <!-- 21 -->
+            <div class="movie" onclick="window.location.href='STEINS.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BZjI1YjZiMDUtZTI3MC00YTA5LWIzMmMtZmQ0NTZiYWM4NTYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                <p class="movie-title">Steins;Gate</p>
+            </div>
+            <!-- 22 -->
+            <div class="movie" onclick="window.location.href='GIN.html';">
+                <img src="https://musicart.xboxlive.com/7/79e65500-0000-0000-0000-000000000002/504/image.jpg" >
+                <p class="movie-title">Gintama</p>
+            </div>
+            <!-- 23 -->
+            <div class="movie" onclick="window.location.href='OPM.html';">
+                <img src="https://i.redd.it/g99hidftyfi91.jpg" >
+                <p class="movie-title">One Punch Man</p>
+            </div>
+            <!-- 24 -->
+            <div class="movie" onclick="window.location.href='MOB.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzU3NDM4ZjgtY2UyMi00YTczLTgyNDEtMjBiMDJlOGUxNjcxXkEyXkFqcGc@._V1_.jpg" >
+                <p class="movie-title">Mob Psycho 100</p>
+            </div>
+            <!-- 25 -->
+            <div class="movie" onclick="window.location.href='TPN.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BMGQ4ZGJhZTUtZDQ5Mi00NTI1LWEyYjItMzIxM2VlNmY4MDEyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" >
+                <p class="movie-title">The Promised Neverland</p>
+            </div>
+            <!-- 26 -->
+            <div class="movie" onclick="window.location.href='SOLO.html';">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjydKUpH1rz3V2N2oTcKX7O3QIMkH_-xqqw&s" >
+                <p class="movie-title">Solo Leveling</p>
+            </div>
+            <!-- 27 -->
+            <div class="movie" onclick="window.location.href='MIA.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BZjM4ODA5YTktNjliMC00NzI5LTk3ZTctZWYyYWEyNTJhMmQzXkEyXkFqcGc@._V1_.jpg" >
+                <p class="movie-title">Made In Abyss</p>
+            </div>
+            <!-- 28 -->
+            <div class="movie" onclick="window.location.href='FIRE.html';">
+                <img src="https://m.media-amazon.com/images/M/MV5BMThhODExMTUtZmIyMC00OTY4LTk5YWMtN2YxYWRhNmNiNDNmXkEyXkFqcGc@._V1_.jpg" >
+                <p class="movie-title">Fire Force</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showTab(event, tabName) {
+            event.preventDefault();
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            var links = document.querySelectorAll('.tabs ul li a');
+            for (var j = 0; j < links.length; j++) {
+                links[j].classList.remove('active');
+            }
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
